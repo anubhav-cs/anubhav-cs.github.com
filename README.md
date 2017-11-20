@@ -1,2 +1,2 @@
-# anubhav-cs.github.com
-My Page
+# anubhav-cs.github.io
+Visit `anubhav-cs.github.io`
