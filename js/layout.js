@@ -17,7 +17,7 @@ function setActiveMenuSytle() {
             $( $menuList[i]).css({background: 'linear-gradient(to bottom, \n\
                             #00cc99 0%, #006666 100%)'});
         }else {
-            $($menuList[i]).css({background: green});
+            $($menuList[i]).css({background: 'green'});
         }
     }
 }
