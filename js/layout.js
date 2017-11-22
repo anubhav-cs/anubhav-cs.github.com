@@ -2,6 +2,32 @@
 Copyright 2017 zUratva.com
 */
 
+
+
+function setActiveMenuSytle() {
+
+    
+    var $menuList = $(".menu-bar a");
+//    alert(document.URL + $menuList[0]);
+    
+    for(i = 0; i < $menuList.length; i++) {
+        
+//        alert(document.URL + $menuList[i]);
+        if ( $menuList[i] == document.URL ) {
+            $( $menuList[i]).css({background: 'linear-gradient(to bottom, \n\
+                            #00cc99 0%, #006666 100%)'});
+        }else {
+            $($menuList[i]).css({'background-color': '#B8B8B8'});
+        }
+    }
+}
+
+
+$(function(){
+setActiveMenuSytle();
+});
+
+
 $(function(){
     var $topHeaderPos   = $(".menu-bar").offset().top;
     
