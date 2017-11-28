@@ -1,21 +1,31 @@
 @font-face {
-font-family:'fontawesome';
-src: url('../lib/fonts/fontawesome.eot?14663396');
-src:url('../lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
-url('../lib/fonts/fontawesome.woff?14663396') format('woff'),
-url('../lib/fonts/fontawesome.ttf?14663396') format('truetype'),
-url('../lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
-font-weight:normal;
-font-style:normal;
+  font-family: 'FontAwesome';
+  src: url('../lib/fonts/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../lib/fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'),
+      url('../lib/fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'),
+      url('../lib/fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'),
+      url('../lib/fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+    min-height: 100vh;
+    overflow:auto;
 }
 
 body {
     margin: 0;
     padding: 0;
     background: url("/images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
     background-color: rgba(0, 0, 0, 1);
     color: whitesmoke;
     font-family: Arial, Lucida Console;
+    min-height: 100vh;
+    overflow:auto;
 }
 
 div {
@@ -30,23 +40,6 @@ div {
     float: left;
 }
 
-.text-icon {
-    font-family: FontAwesome;
-    font-size: 20px;
-}
-
-.search-icon::before {
-    font-family: FontAwesome;
-    font-size: 19px;
-    content: '\e802';
-}
-
-.home-icon::before {
-    font-family: FontAwesome;
-    font-size: 20px;
-    content: '\e800';
-}
-
 .menu-bar {
     font-size: 0px;
     padding:0px 0px;
@@ -56,12 +49,9 @@ div {
     white-space: normal;
     top:0;
     height: 32px;
-    overflow: hidden;
-
 }
 
 .menu-bar a {
-
     padding-left: 12px;
     padding-right: 12px;
     display: inline-block;
@@ -73,19 +63,75 @@ div {
     line-height: 1.7;
 }
 
-.menu-bar a:hover, .menu-bar a:focus {
+.menu-bar a:hover {
     font-size: 19px;
     text-decoration: none;
     background-color: #006699;
-    background: linear-gradient(to bottom, #cc0000 0%, #800000 100%);
+    background:linear-gradient(to bottom, #ffcc66 0%, #ff9966 100%);
 }
 
 .menu-bar a:active {
     background: linear-gradient(to bottom, #00cc99 0%, #006666 100%);
 }
 
+.more-menus {
+    visibility: hidden;
+    display: none;
+    z-index: 1;
+    position: fixed;
+    background: black;
+    border: 2px solid #ff944d;
+    min-width: 200px;
+}
+
+.more-menus a{
+    display: block;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+    height: 100%;
+    line-height: 1.7;
+}
+
+.more-menus a:hover {
+    font-size: 19px;
+    text-decoration: none;
+    background-color: #006699;
+    background: linear-gradient(to bottom, #cc0000 0%, #800000 100%);
+}
+
+.more-menus a:active {
+    background: linear-gradient(to bottom, #00cc99 0%, #006666 100%);
+}
+
+.text-icon {
+    font-family: FontAwesome;
+    font-size: 20px;
+}
+
+.search-icon::before {
+    content: '\f002';
+}
+
+.home-icon::before {
+    content: '\f015';
+}
+
+.three-bar-icon::before {
+    content: '\f0c9';
+}
+
+.more-icon::before {
+    content: '\f103';
+}
+
+.more-icon {
+    visibility: hidden;
+}
+
 .main-body {
-    min-height: 575px;
+    min-height: calc(100vh - 215px);
     border-left: 2px solid #ff944d;
     border-right: 2px solid #ff944d;
     overflow: auto;
@@ -123,29 +169,34 @@ div {
     margin-left: 210px;
     font-size: 17px;
     padding: 20px;
-    min-height: 570px;
+    min-height: calc(100vh - 310px);
+    overflow:auto;
+}
+
+.bottom-logo {
+    
 }
 
 .bottom-bar {
     text-align: center;
     font-size: 0px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
     border: 2px solid #ff944d;
     position: fixed;
     width: 100%;
     bottom: 0px;
+    background: black;
+    z-index: 1;
 }
 
 .bottom-bar a {
     padding: 10px 10px;
     font-size: 15px;
     color: inherit;
-
 }
 
 #container {
     font-size: 12px;
+    min-height: 100vh;
  
 }
 
@@ -153,6 +204,7 @@ div {
     height: 140px;
     background-image: url("/images/header-background3.png");
     background-repeat: no-repeat;
+    background-size:cover;
     background-color: black;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
