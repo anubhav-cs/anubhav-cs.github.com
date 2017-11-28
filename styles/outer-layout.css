@@ -169,7 +169,7 @@ div {
     margin-left: 210px;
     font-size: 17px;
     padding: 20px;
-    min-height: calc(100vh - 310px);
+    min-height: calc(100vh - 365px);
     overflow:auto;
 }
 
